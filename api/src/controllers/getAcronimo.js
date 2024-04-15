@@ -11,7 +11,7 @@ const getAcronico = async (req, res) => {
         let URL = `http://www.nactem.ac.uk/software/acromine/dictionary.py?sf=${sf}`
         const datos= await axios.get(URL);
         if (datos.data.length === 0){
-            Acronicos.push({lf:"NO FOUND"})
+            Acronicos.push({lf:"NOT FOUND"})
         }else{
 
             datos.data[0].lfs.forEach((e)=>{
