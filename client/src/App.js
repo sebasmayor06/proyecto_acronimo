@@ -78,7 +78,6 @@ function App() {
                 <ul key={index}>
                   <li  >
                     {e.name}
-                    {e.since}
                   </li>
                 </ul>
             )
@@ -103,4 +102,3 @@ function App() {
 }
 
 export default App;
-

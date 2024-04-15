@@ -5,7 +5,7 @@ const cors = require('cors');
 
 const {database} = require('./src/db')
 
-const PORT = 3001
+const PORT = process.env.PORT || 3001;
 
 const server = express()
 
@@ -19,7 +19,7 @@ server.use('/api', RouterAcronico)
 
 
 database.sync({force:true}).then(()=>
-server.listen(3001, () => {
+server.listen(PORT, () => {
   console.log(`%s listening at ${PORT}`); // eslint-disable-line no-console
 })
 )
